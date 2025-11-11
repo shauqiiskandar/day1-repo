@@ -1,15 +1,14 @@
-// Given variables
-let a = 10
-let b = "10"
-let c = true
+// TODO: create the Person class using a function
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
 
-// // Type your code below
-// Your task is to perform the following comparisons and print the results:
+    this.describe = function() {
+        return this.name + ", " + this.age + " years old";
+    }    
+}
 
-
-
-// Don't change the line below
-console.log(`d = ${d}`)
-console.log(`e = ${e}`)
-console.log(`f = ${f}`)
-console.log(`g = ${g}`)
+var jack = new Person("Jack", 25);
+var jill = new Person("Jill", 24);
+console.log(jack.describe());
+console.log(jill.describe());
