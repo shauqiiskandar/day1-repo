@@ -1,14 +1,14 @@
-// TODO: create the Person class using a function
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
+// Initialize variables
+let has_license = true;
+let has_space = false;
+let has_experience = true;
 
-    this.describe = function() {
-        return this.name + ", " + this.age + " years old";
-    }    
-}
+// Calculate conditions
+let can_sell_regular_pet = (has_license || has_experience) && has_space;
+let can_sell_exotic_pet = (has_license && has_experience) && has_space;
+let cannot_sell_any_pet = (!(has_license) || !(has_experience)) || !has_space
 
-var jack = new Person("Jack", 25);
-var jill = new Person("Jill", 24);
-console.log(jack.describe());
-console.log(jill.describe());
+// Don't delete the lines below
+console.log("Can sell regular pet:", can_sell_regular_pet)
+console.log("Can sell exotic pet:", can_sell_exotic_pet)
+console.log("Cannot sell any pet:", cannot_sell_any_pet)
