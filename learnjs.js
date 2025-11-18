@@ -1,11 +1,15 @@
-let a = 16
-let b = 10
-
-// Don't change below this line
-let c = 0;
-if (a >= b && !(b < 10)) {
-    c = 2;
+let wind = parseInt(inp); // Don't change this line
+let condition = "unset";
+// Type your code below
+if (wind < 8) {
+    condition = "Calm";
+} else if (wind >= 8 && wind <= 31) {
+    condition = "Breeze";
+} else if (wind >= 32 && wind <= 63) {
+    condition = "Gale";
+} else{
+    condition = "Storm";
 }
 
-c += 1;
-console.log(`c = ${c}`);
+// Don't change the line below
+console.log(`condition = ${condition}`);
